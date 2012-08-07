@@ -15,11 +15,12 @@ window.addEventListener ("DOMContentLoaded", function(){
 	 	return theElement;
 	 }
 	//Create select field elements and populate with options.
+	
 	function makeCats (){
 		 var formTag=document.getElementsByTagName ("form"),
 		 selectLi=$('categories'),
 		 makeSelect=document.createElement ('select');
-		 makeSelect.attributes("id", "category");
+		 makeSelect.setAttribute("id", "category");
 		 for (i=0; i<taskCategories.length; i++){
 		 	var makeOption=document.createElement('option');
 			var optText=taskCategories[i];
@@ -30,7 +31,7 @@ window.addEventListener ("DOMContentLoaded", function(){
 		 selectLi.appendChild(makeSelect);
 	}
 	//Variable defaults
-	var taskCategories=["Choose a task", "Grade papers", "Contact parents", "Meetings", "Write lesson plans", "Test", "Projects", "Others"]
+	var taskCategories=["Choose a task", "Grade papers", "Contact parents", "Meetings", "Write lesson plans", "Test", "Projects", "Others"];
 	makeCats();
 	
 	//Set Link and Submit Click Events 
