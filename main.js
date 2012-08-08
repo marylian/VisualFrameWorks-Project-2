@@ -7,7 +7,7 @@ alert (chameleon);
 
 //Wait until the DOM is ready
 window.addEventListener ("DOMContentLoaded", function(){
-	
+	//alert(localStorage.value(0));	
 
 	//getElementById Function
 	 function $ (x) {
@@ -31,13 +31,24 @@ window.addEventListener ("DOMContentLoaded", function(){
 		 selectLi.appendChild(makeSelect);
 	}
 	
+	//Find the value of selected checkboxes
+	function getSelectedCheckbox () {
+		var checkbox =document.forms [0].weekday;
+		for (var i=0; i<checkbox.length; i++){
+			if (checkbox[i].checked) {
+				dayValue = checkbox [i].value;
+			}
+		}
+	}
+	
 	function storeData (){
 		//localStorage.setItem("test","hello");
 		var id 					=Math.floor(Math.random()*100000001);
 		//Gather up all our form field values and store in an object.
 		//Object properties contain array with the form label and input value.
+		getSelectedCheckbox ();
 		var item				= {}; 
-			//item.checkbox
+			item.checkbox     	= ["Choose a day", dayValue]
 			item.sub			= ["Subject:", $('sub').value];
 			item.period			= ["Period:", $('period').value];
 			item.grade			= ["Grade Level:", $('grade').value];
@@ -51,11 +62,13 @@ window.addEventListener ("DOMContentLoaded", function(){
 	}
 	 
 	//Variable defaults
-	var taskCategories=["Choose a task", "Grade papers", "Contact parents", "Meetings", "Write lesson plans", "Test", "Projects", "Others"];
+	var taskCategories=["Choose a task", "Grade papers", "Contact parents", "Meetings", "Write lesson plans", "Test", "Projects", "Others"],
+		dayValue;
+	
 	makeCats();
 	
 	//Set Link and Submit Click Events 
-	//var displayTask= $('displayTask');
+	//var displayTask= $('displayTask'); 
 	//displayTask.addEventListener ("click", getData); 
 	//var clearLink= $('clearTask');
 	//clearLink.addEventListener ("click",clearLocal);
