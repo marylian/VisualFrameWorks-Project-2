@@ -36,8 +36,7 @@ window.addEventListener ("DOMContentLoaded", function(){
 		var id 					=Math.floor(Math.random()*100000001);
 		//Gather up all our form field values and store in an object.
 		//Object properties contain array with the form label and input value.
-		var item				= {};
-			
+		var item				= {}; 
 			//item.checkbox
 			item.sub			= ["Subject:", $('sub').value];
 			item.period			= ["Period:", $('period').value];
@@ -45,8 +44,9 @@ window.addEventListener ("DOMContentLoaded", function(){
 			item.category		= ["Categories:", $('category').value];
 			item.date			= ["Due Date:", $('dueDate').value];
 			item.comments		= ["My Notes:", $('comments').value];
-		//Save data into Local Storage:
-		
+		//Save data into Local Storage: Use Stringify to convert our object to a string.
+		localStorage.setItem  (id, JSON.stringify (item));
+		alert ("Task Saved!");
 			
 	}
 	 
