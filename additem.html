@@ -26,18 +26,18 @@
 				<ul>
 					<li>Please Choose a Day:
 						<ul>
-							<li><input	type="checkbox" value= "Monday" id="monday"/><label for="monday">Monday</label></li>
-							<li><input	type="checkbox" value= "Tuesday" id="tuesday"/><label for="tuesday">Tuesday</label></li>
-							<li><input	type="checkbox" value= "Wednesday" id="wednesday"/><label for="wednesday">Wednesday</label></li>
-							<li><input	type="checkbox" value= "Thursday" id="thursday"/><label for="thursday">Thursday</label></li>
-							<li><input	type="checkbox" value= "Friday" id="friday"/><label for="friday">Friday</label></li>
+							<li><input	name= "weekday" type="checkbox" value= "Monday" id="monday"/><label for="monday">Monday</label></li>
+							<li><input	name= "weekday" type="checkbox" value= "Tuesday" id="tuesday"/><label for="tuesday">Tuesday</label></li>
+							<li><input	name= "weekday" type="checkbox" value= "Wednesday" id="wednesday"/><label for="wednesday">Wednesday</label></li>
+							<li><input	name= "weekday" type="checkbox" value= "Thursday" id="thursday"/><label for="thursday">Thursday</label></li>
+							<li><input	name= "weekday" type="checkbox" value= "Friday" id="friday"/><label for="friday">Friday</label></li>
 						</ul>
 					</li>
 					<li><label for="sub">Subject: </label><input type="text" id="sub"/></li>
 					<li><label for="period">Period: </label><input type="text" id="period" />	
 					</li>
 					<li>
-						Grade Level:<input type="range" name="range1" min="1" max="12" step="1" value="0" />
+						Grade Level:<input type="range" name="range1" min="1" max="12" step="1" value="0" id="grade"/>
 					</li>					
 					<li id="categories"><label for="categories"> Task Categories</label> 
 <!--				<select >
@@ -53,7 +53,7 @@
 						</select>-->
 					</li>
 					<li>
-						Due Date: <input type="date" name="Due Date" />	
+						<label for="dueDate">Due Date: </label><input type="date" id="dueDate" name="Due Date" />	
 					</li>
 					<li>
 						<label for="comments"> My Notes: </label><textarea id="comments">Type notes here.</textarea>
