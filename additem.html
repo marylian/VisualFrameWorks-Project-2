@@ -20,7 +20,7 @@
 		<!--Document Body-->
 	<body>
 		<h1> Weekly Teacher Tasks</h1>
-		<form action="#" method="post"> 
+		<form action="#" method="post" id="taskForm"> 
 			<fieldset>
 				<legend>Add a Task</legend>
 				<ul>
@@ -62,8 +62,11 @@
 			</fieldset>
 			<input type="submit" id="taskSubmit" value="Submit my task!"/>	
 		</form>
-		<a href="url" id="clearTask">Clear Stored Data</a>
-		<a href="url" id="displayTask">Display Data</a>	
+		<nav>
+			<a href="url" id="clearTask">Clear Stored Data</a>
+			<a href="url" id="displayTask">Display Data</a>
+			<a href="additem.html" id="addTask" style="display: none;">Add a task</a>
+		</nav>
 		<script type="text/javascript" src="main.js"></script>
 	</body> 
 </html>
